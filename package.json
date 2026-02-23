@@ -1,0 +1,12 @@
+{
+  "name": "trackfit-landing",
+  "version": "1.0.0",
+  "description": "TrackFit – a fitness tracking landing page with scroll-based background transitions and progress visuals.",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Open index.html in your browser to view TrackFit.\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
+

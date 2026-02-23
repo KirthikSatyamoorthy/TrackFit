@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackFit – Track Your Fitness Journey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="theme-hero">
+    <header class="tf-header">
+      <div class="tf-header-inner">
+        <a href="#hero" class="tf-logo">
+          <span class="tf-logo-mark">TF</span>
+          <span class="tf-logo-text">TrackFit</span>
+        </a>
+        <nav class="tf-nav">
+          <a href="#features" class="tf-nav-link">Features</a>
+          <a href="#daily-tracks" class="tf-nav-link">Daily Tracks</a>
+          <a href="#routine" class="tf-nav-link">Routine</a>
+          <a href="profile-tasks.html" class="tf-nav-link">Profile</a>
+          <a href="#history" class="tf-nav-link">History</a>
+        </nav>
+        <div class="tf-auth" id="tf-auth-container">
+          <div class="tf-auth-buttons" id="tf-auth-buttons">
+            <button class="tf-btn tf-btn-ghost" id="tf-sign-in-btn">Sign in</button>
+            <button class="tf-btn tf-btn-primary" id="tf-get-started-btn">
+              Get started
+            </button>
+          </div>
+          <button class="tf-profile-pill" id="tf-profile-pill" type="button" hidden>
+            <span class="tf-profile-avatar" id="tf-profile-avatar">U</span>
+            <span class="tf-profile-text">
+              <span class="tf-profile-label">Profile</span>
+              <span class="tf-profile-name" id="tf-profile-name">User</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="tf-section tf-hero" data-theme="hero">
+        <div class="tf-section-inner tf-hero-grid">
+          <div class="tf-hero-text" data-animate>
+            <p class="tf-pill">New · Smarter fitness tracking</p>
+            <h1>Turn every workout into visible progress.</h1>
+            <p class="tf-hero-subtitle">
+              TrackFit connects your daily routines, previous history, and
+              performance insights into one clear timeline—so you always know
+              what’s working and what’s next.
+            </p>
+            <div class="tf-hero-actions">
+              <button class="tf-btn tf-btn-primary tf-btn-lg">
+                Start tracking today
+              </button>
+              <button class="tf-btn tf-btn-ghost tf-btn-lg">
+                View progress demo
+              </button>
+            </div>
+            <div class="tf-hero-meta" id="tf-hero-metrics">
+              <div>
+                <span class="tf-hero-meta-label">Daily streak</span>
+                <span class="tf-hero-meta-value" id="tf-hero-streak">24 days</span>
+              </div>
+              <div>
+                <span class="tf-hero-meta-label">Routine consistency</span>
+                <span class="tf-hero-meta-value" id="tf-hero-consistency">+18%</span>
+              </div>
+              <div>
+                <span class="tf-hero-meta-label">Workouts logged</span>
+                <span class="tf-hero-meta-value" id="tf-hero-workouts">320+</span>
+              </div>
+            </div>
+          </div>
+          <div class="tf-hero-visual" data-animate>
+            <div class="tf-card tf-card-main">
+              <div class="tf-card-header">
+                <span>Weekly Progress</span>
+                <span class="tf-dot tf-dot-green">Up 12%</span>
+              </div>
+              <div class="tf-progress-graph">
+                <div class="tf-progress-bar" style="--value: 0.3"></div>
+                <div class="tf-progress-bar" style="--value: 0.55"></div>
+                <div class="tf-progress-bar" style="--value: 0.72"></div>
+                <div class="tf-progress-bar" style="--value: 0.6"></div>
+                <div class="tf-progress-bar" style="--value: 0.85"></div>
+                <div class="tf-progress-bar" style="--value: 0.92"></div>
+                <div class="tf-progress-bar" style="--value: 0.75"></div>
+              </div>
+              <div class="tf-card-footer">
+                <span>This week</span>
+                <span class="tf-trend">More consistent than last 30 days</span>
+              </div>
+            </div>
+            <div class="tf-card tf-card-secondary">
+              <div class="tf-card-row">
+                <span>Today’s focus</span>
+                <span class="tf-tag tf-tag-focus">Strength · Upper body</span>
+              </div>
+              <div class="tf-card-row">
+                <span>Avg. sleep</span>
+                <span>7h 42m</span>
+              </div>
+              <div class="tf-card-row">
+                <span>Calories burned</span>
+                <span>2,150 kcal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section
+        id="features"
+        class="tf-section tf-section-alt"
+        data-theme="features"
+      >
+        <div class="tf-section-inner">
+          <header class="tf-section-header" data-animate>
+            <p class="tf-kicker">Features</p>
+            <h2>Everything you need to track, learn, and improve.</h2>
+            <p class="tf-section-subtitle">
+              Track workouts, nutrition, and progress over time with clear,
+              visual insights that keep you motivated.
+            </p>
+          </header>
+          <div class="tf-features-grid">
+            <article class="tf-feature-card" data-animate>
+              <div class="tf-feature-icon tf-feature-icon-workout">
+                <span class="tf-feature-glyph">🏋️</span>
+              </div>
+              <h3>Smart workout tracking</h3>
+              <p>
+                Log sets, reps, and intensity in seconds. TrackFit highlights
+                how today compares to your best days.
+              </p>
+              <ul class="tf-feature-list">
+                <li>Personalized routine suggestions</li>
+                <li>Auto-detected plate and weight changes</li>
+                <li>Rest timer and form reminders</li>
+              </ul>
+            </article>
+
+            <article class="tf-feature-card" data-animate>
+              <div class="tf-feature-icon tf-feature-icon-nutrition">
+                <span class="tf-feature-glyph">🥗</span>
+              </div>
+              <h3>Balanced nutrition logs</h3>
+              <p>
+                Connect meals to performance with macro overviews and daily
+                energy balance insights.
+              </p>
+              <ul class="tf-feature-list">
+                <li>Quick-save favorite meals</li>
+                <li>Macro targets for each goal</li>
+                <li>Hydration & recovery tracking</li>
+              </ul>
+            </article>
+
+            <article class="tf-feature-card" data-animate>
+              <div class="tf-feature-icon tf-feature-icon-progress">
+                <span class="tf-feature-glyph">📈</span>
+              </div>
+              <h3>Clear progress graphs</h3>
+              <p>
+                Visualize strength, endurance, and body metrics over weeks and
+                months to see real improvement.
+              </p>
+              <ul class="tf-feature-list">
+                <li>Side‑by‑side history comparisons</li>
+                <li>Highlight personal records automatically</li>
+                <li>Trend lines for every key metric</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Tracks -->
+      <section
+        id="daily-tracks"
+        class="tf-section tf-daily"
+        data-theme="daily"
+      >
+        <div class="tf-section-inner">
+          <header class="tf-section-header" data-animate>
+            <p class="tf-kicker">Daily tracks</p>
+            <h2>See each day in the context of your journey.</h2>
+            <p class="tf-section-subtitle">
+              Scroll through your routine timeline to see how today builds on
+              yesterday, last week, and beyond.
+            </p>
+          </header>
+
+          <div class="tf-daily-layout">
+            <div class="tf-daily-timeline" data-animate>
+              <div class="tf-timeline-day tf-timeline-day-today">
+                <div class="tf-timeline-marker"></div>
+                <div class="tf-timeline-content">
+                  <p class="tf-timeline-label">Today · Day 24</p>
+                  <h3>Strength & conditioning mix</h3>
+                  <p class="tf-timeline-meta">
+                    5 exercises · 52 minutes · 580 kcal
+                  </p>
+                  <ul class="tf-tag-row">
+                    <li class="tf-tag tf-tag-focus">Upper body</li>
+                    <li class="tf-tag tf-tag-focus">Core</li>
+                    <li class="tf-tag">Zone 2 cardio</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tf-timeline-day" data-animate>
+                <div class="tf-timeline-marker"></div>
+                <div class="tf-timeline-content">
+                  <p class="tf-timeline-label">Yesterday</p>
+                  <h3>Recovery & mobility</h3>
+                  <p class="tf-timeline-meta">
+                    35 minutes · Full body stretch · +12% sleep score
+                  </p>
+                </div>
+              </div>
+
+              <div class="tf-timeline-day" data-animate>
+                <div class="tf-timeline-marker"></div>
+                <div class="tf-timeline-content">
+                  <p class="tf-timeline-label">3 days ago</p>
+                  <h3>PR on deadlifts</h3>
+                  <p class="tf-timeline-meta">
+                    5x5 at 120kg · +10kg vs last month
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="tf-daily-sidecard" data-animate>
+              <div class="tf-card tf-card-history">
+                <div class="tf-card-header">
+                  <span>Routine history</span>
+                  <span class="tf-dot">Past 30 days</span>
+                </div>
+                <div class="tf-history-metrics">
+                  <div class="tf-history-item">
+                    <span class="tf-history-label">Consistency</span>
+                    <span class="tf-history-value" id="tf-history-consistency">86%</span>
+                    <span
+                      class="tf-history-delta tf-history-delta-up"
+                      id="tf-history-consistency-delta"
+                    >
+                      +14% vs last month
+                    </span>
+                  </div>
+                  <div class="tf-history-item">
+                    <span class="tf-history-label">Average duration</span>
+                    <span class="tf-history-value" id="tf-history-avg-duration">47 min</span>
+                    <span class="tf-history-delta">Steady</span>
+                  </div>
+                  <div class="tf-history-item">
+                    <span class="tf-history-label">Recovery score</span>
+                    <span class="tf-history-value">78</span>
+                    <span class="tf-history-delta tf-history-delta-up">
+                      +9 points
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Routine -->
+      <section
+        id="routine"
+        class="tf-section tf-routine"
+        data-theme="daily"
+      >
+        <div class="tf-section-inner">
+          <header class="tf-section-header" data-animate>
+            <p class="tf-kicker">Routine</p>
+            <h2>Turn intentions into completed tasks.</h2>
+            <p class="tf-section-subtitle">
+              Add the small, repeatable actions that move your training forward and check them off as you go.
+            </p>
+          </header>
+
+          <div class="tf-routine-grid">
+            <div class="tf-card tf-routine-create" data-animate>
+              <h3>Create routine tasks</h3>
+              <p class="tf-routine-helper">
+                Capture today’s focus or long‑term habits in a simple checklist. Your progress feeds into the stats above.
+              </p>
+              <form id="tf-routine-form" class="tf-routine-form">
+                <div class="tf-routine-row">
+                  <label for="tf-routine-title">Task</label>
+                  <input
+                    type="text"
+                    id="tf-routine-title"
+                    name="title"
+                    placeholder="e.g. 10k steps, mobility, hydration check"
+                    required
+                  />
+                </div>
+                <div class="tf-routine-row">
+                  <label for="tf-routine-date">Target day</label>
+                  <input type="date" id="tf-routine-date" name="targetDate" />
+                </div>
+                <div class="tf-routine-row">
+                  <label for="tf-routine-notes">Notes (optional)</label>
+                  <textarea
+                    id="tf-routine-notes"
+                    name="description"
+                    rows="2"
+                    placeholder="Add any context you want to remember."
+                  ></textarea>
+                </div>
+                <div class="tf-routine-actions">
+                  <button type="submit" class="tf-btn tf-btn-primary tf-btn-lg">
+                    Add to routine
+                  </button>
+                  <p class="tf-routine-status" id="tf-routine-status"></p>
+                </div>
+              </form>
+            </div>
+
+            <div class="tf-card tf-routine-list-card" data-animate>
+              <div class="tf-card-header">
+                <span>Today’s routine</span>
+                <span class="tf-dot" id="tf-routine-count-label">0 tasks</span>
+              </div>
+              <ul class="tf-routine-list" id="tf-routine-list">
+                <!-- Tasks will be injected here by script.js -->
+              </ul>
+              <p class="tf-routine-empty" id="tf-routine-empty">
+                No routine tasks yet. Add your first habit to start tracking completions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History & Improvements -->
+      <section id="history" class="tf-section tf-history" data-theme="history">
+        <div class="tf-section-inner">
+          <header class="tf-section-header" data-animate>
+            <p class="tf-kicker">History & improvement</p>
+            <h2>Look back, see better.</h2>
+            <p class="tf-section-subtitle">
+              TrackFit automatically connects your past and present, showing how
+              your discipline compounds into visible progress.
+            </p>
+          </header>
+
+          <div class="tf-history-grid">
+            <div class="tf-card tf-card-progress-detail" data-animate>
+              <div class="tf-card-header">
+                <span>12‑week strength trend</span>
+                <span class="tf-dot tf-dot-green">Improving</span>
+              </div>
+              <div class="tf-history-chart">
+                <div class="tf-history-line tf-history-line-1"></div>
+                <div class="tf-history-line tf-history-line-2"></div>
+                <div class="tf-history-points">
+                  <span>Week 1</span>
+                  <span>Week 6</span>
+                  <span>Week 12</span>
+                </div>
+              </div>
+              <div class="tf-card-footer tf-card-footer-split">
+                <div>
+                  <p class="tf-footer-label">Volume lifted</p>
+                  <p class="tf-footer-value">+42%</p>
+                </div>
+                <div>
+                  <p class="tf-footer-label">Session quality</p>
+                  <p class="tf-footer-value">+19%</p>
+                </div>
+                <div>
+                  <p class="tf-footer-label">Missed workouts</p>
+                  <p class="tf-footer-value tf-footer-value-down">−7 days</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tf-history-copy" data-animate>
+              <h3>Designed to keep you coming back.</h3>
+              <p>
+                The homepage surfaces your most important metrics at a glance:
+                your current streak, what’s improved since last month, and
+                which habit will move the needle today.
+              </p>
+              <p>
+                Smooth transitions and subtle animations guide your eye as you
+                scroll—from today’s daily track to long‑term graphs that prove
+                your effort is paying off.
+              </p>
+              <ul class="tf-feature-list">
+                <li>Instantly compare any two weeks of history</li>
+                <li>Highlight improvements in strength, endurance, or balance</li>
+                <li>Celebrate milestones with shareable progress cards</li>
+              </ul>
+              <button class="tf-btn tf-btn-outline tf-btn-lg">
+                Explore your progress
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="tf-footer">
+      <div class="tf-footer-inner">
+        <span>© <span id="year"></span> TrackFit. Built for consistent movers.</span>
+        <nav class="tf-footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#features">Features</a>
+          <a href="#daily-tracks">Daily tracks</a>
+          <a href="#routine">Routine</a>
+          <a href="profile-tasks.html">Profile</a>
+          <a href="#history">History</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Simple auth modal -->
+    <div class="tf-auth-modal" id="tf-auth-modal" aria-hidden="true">
+      <div class="tf-auth-modal-backdrop" data-close-auth></div>
+      <div class="tf-auth-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="tf-auth-title">
+        <button class="tf-auth-close" type="button" data-close-auth>&times;</button>
+        <h2 id="tf-auth-title">Sign in to TrackFit</h2>
+        <p class="tf-auth-subtitle">
+          Use a name and email to create your session. We’ll use it to personalize your stats and routines.
+        </p>
+        <form id="tf-auth-form" class="tf-auth-form">
+          <label for="tf-auth-name">Name</label>
+          <input
+            type="text"
+            id="tf-auth-name"
+            name="name"
+            placeholder="Alex"
+            required
+          />
+
+          <label for="tf-auth-email">Email</label>
+          <input
+            type="email"
+            id="tf-auth-email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <button type="submit" class="tf-btn tf-btn-primary tf-btn-lg tf-auth-submit">
+            Continue
+          </button>
+          <p class="tf-auth-status" id="tf-auth-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

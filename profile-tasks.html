@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackFit – Profile Checklist</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="theme-hero">
+    <header class="tf-header">
+      <div class="tf-header-inner">
+        <a href="index.html#hero" class="tf-logo">
+          <span class="tf-logo-mark">TF</span>
+          <span class="tf-logo-text">TrackFit</span>
+        </a>
+        <nav class="tf-nav">
+          <a href="index.html#features" class="tf-nav-link">Features</a>
+          <a href="index.html#daily-tracks" class="tf-nav-link">Daily Tracks</a>
+          <a href="index.html#routine" class="tf-nav-link">Routine</a>
+          <a href="profile-tasks.html" class="tf-nav-link">Profile</a>
+          <a href="index.html#history" class="tf-nav-link">History</a>
+        </nav>
+        <div class="tf-auth" id="tf-auth-container">
+          <div class="tf-auth-buttons" id="tf-auth-buttons">
+            <button class="tf-btn tf-btn-ghost" id="tf-sign-in-btn">Sign in</button>
+            <button class="tf-btn tf-btn-primary" id="tf-get-started-btn">
+              Get started
+            </button>
+          </div>
+          <button class="tf-profile-pill" id="tf-profile-pill" type="button" hidden>
+            <span class="tf-profile-avatar" id="tf-profile-avatar">U</span>
+            <span class="tf-profile-text">
+              <span class="tf-profile-label">Profile</span>
+              <span class="tf-profile-name" id="tf-profile-name">User</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="profile-tasks" class="tf-section tf-profile" data-theme="hero">
+        <div class="tf-section-inner">
+          <header class="tf-section-header" data-animate>
+            <p class="tf-kicker">Profile</p>
+            <h2>Task checklist for your training phases.</h2>
+            <p class="tf-section-subtitle">
+              Break your routine into phases and track progress with simple checkboxes. Your header and profile stay consistent as you move between pages.
+            </p>
+          </header>
+
+          <div class="tf-profile-grid">
+            <div class="tf-card tf-profile-main" data-animate>
+              <div class="tf-profile-header">
+                <div class="tf-profile-header-main">
+                  <div class="tf-profile-avatar-lg" id="tf-profile-avatar-lg">U</div>
+                  <div class="tf-profile-header-text">
+                    <h3 id="tf-profile-name-main">Your name</h3>
+                    <p id="tf-profile-email-main" class="tf-profile-email">you@example.com</p>
+                  </div>
+                </div>
+                <button class="tf-btn tf-btn-outline" id="tf-logout-btn" type="button">
+                  Log out
+                </button>
+              </div>
+              <div class="tf-profile-meta">
+                <div>
+                  <span class="tf-profile-meta-label">Current streak</span>
+                  <span class="tf-profile-meta-value" id="tf-profile-streak">0 days</span>
+                </div>
+                <div>
+                  <span class="tf-profile-meta-label">Routine consistency</span>
+                  <span class="tf-profile-meta-value" id="tf-profile-consistency">0%</span>
+                </div>
+                <div>
+                  <span class="tf-profile-meta-label">Workouts logged</span>
+                  <span class="tf-profile-meta-value" id="tf-profile-workouts">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="tf-section tf-checklist" data-theme="daily">
+            <div class="tf-checklist-header" data-animate>
+              <div>
+                <h3>Phase checklist</h3>
+                <p class="tf-checklist-subtitle">
+                  Use the phases and status column to mirror a task‑management grid. Each tick moves a task from
+                  <strong>Not started</strong> → <strong>In progress</strong> → <strong>Complete</strong>.
+                </p>
+              </div>
+              <div class="tf-checklist-summary" id="tf-checklist-summary">
+                0/0 tasks complete
+              </div>
+            </div>
+
+            <div class="tf-checklist-controls" data-animate>
+              <form id="tf-checklist-form" class="tf-checklist-form">
+                <label class="tf-checklist-label" for="tf-checklist-title">Add task</label>
+                <div class="tf-checklist-add-row">
+                  <input
+                    type="text"
+                    id="tf-checklist-title"
+                    name="title"
+                    placeholder="e.g. Warm‑up & mobility"
+                    required
+                  />
+                  <button type="submit" class="tf-btn tf-btn-primary">Add</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tf-checklist-table-wrapper" data-animate>
+              <table class="tf-checklist-table">
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Phase 1</th>
+                    <th>Phase 2</th>
+                    <th>Phase 3</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="tf-checklist-rows">
+                  <!-- Rows injected by script.js -->
+                </tbody>
+              </table>
+              <p class="tf-checklist-empty" id="tf-checklist-empty">
+                No tasks yet. Add a task above to start tracking phases.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tf-footer">
+      <div class="tf-footer-inner">
+        <span>© <span id="year"></span> TrackFit. Built for consistent movers.</span>
+        <nav class="tf-footer-nav">
+          <a href="index.html#hero">Home</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#daily-tracks">Daily tracks</a>
+          <a href="index.html#routine">Routine</a>
+          <a href="profile-tasks.html">Profile</a>
+          <a href="index.html#history">History</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Auth modal reused so users can sign in directly from this page -->
+    <div class="tf-auth-modal" id="tf-auth-modal" aria-hidden="true">
+      <div class="tf-auth-modal-backdrop" data-close-auth></div>
+      <div class="tf-auth-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="tf-auth-title">
+        <button class="tf-auth-close" type="button" data-close-auth>&times;</button>
+        <h2 id="tf-auth-title">Sign in to TrackFit</h2>
+        <p class="tf-auth-subtitle">
+          Use a name and email to create your session. We’ll use it to personalize your stats and routines.
+        </p>
+        <form id="tf-auth-form" class="tf-auth-form">
+          <label for="tf-auth-name">Name</label>
+          <input
+            type="text"
+            id="tf-auth-name"
+            name="name"
+            placeholder="Alex"
+            required
+          />
+
+          <label for="tf-auth-email">Email</label>
+          <input
+            type="email"
+            id="tf-auth-email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <button type="submit" class="tf-btn tf-btn-primary tf-btn-lg tf-auth-submit">
+            Continue
+          </button>
+          <p class="tf-auth-status" id="tf-auth-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
